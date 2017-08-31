@@ -2,6 +2,8 @@
 
 echo "kubectl cluster-info"
 kubectl cluster-info
+echo "Pod details"
+kubectl get pods --all-namespaces
 echo "Create Guestbook"
 IP_ADDR=$(bx cs workers $CLUSTER_NAME | grep normal | awk '{ print $2 }')
 if [ -z $IP_ADDR ]; then
