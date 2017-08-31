@@ -2,6 +2,7 @@
 
 echo "kubectl cluster-info"
 kubectl cluster-info
+echo $2
 echo "Pod details"
 kubectl get pods --all-namespaces
 echo "Create Guestbook"
