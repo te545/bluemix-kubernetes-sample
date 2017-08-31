@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "kubectl cluster-info"
+kubectl cluster-info
 echo "Create Guestbook"
 IP_ADDR=$(bx cs workers $CLUSTER_NAME | grep normal | awk '{ print $2 }')
 if [ -z $IP_ADDR ]; then
